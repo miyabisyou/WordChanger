@@ -522,7 +522,7 @@ void delete_save()
 			break;
 		else if (x >= 1 && x <= filename.size())
 		{
-			cout << setw(3) << x << "”Ô–Ú : " << filename[x - 1] << "‚ðíœ‚µ‚Ü‚·‚©H  YES -> 0, NO -> 1 : "<< endl;
+			cout << setw(3) << x << "”Ô–Ú : " << filename[x - 1] << "‚ðíœ‚µ‚Ü‚·‚©H  YES -> 0, NO -> 1 : " << endl;
 			scanf("%d", &yn);
 			if (yn == 0)
 			{
@@ -535,8 +535,7 @@ void delete_save()
 				string tmp = "./../data/" + filename[x -1] + ".csv";
 				if(remove(tmp.c_str()))
 				{
-					cout << filename[x -1] <<  "‚Ìíœ‚ÉŽ¸”s‚µ‚Ü‚µ‚½" << endl << endl;
-					break;
+					cout << filename[x - 1] <<  "‚Ìíœ‚ÉŽ¸”s‚µ‚Ü‚µ‚½" << endl << endl;
 				}
 
 				filename.erase(filename.begin() + x - 1);
